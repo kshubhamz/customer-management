@@ -1,12 +1,16 @@
 server:
   port: 4000
 
+logging:
+  level:
+    org: WARN
+
 spring:
   datasource:
     url: jdbc:h2:mem:testdb
   jpa:
     defer-datasource-initialization: true
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
@@ -19,3 +23,8 @@ controller:
   hello:
     name:
       default: Manish
+
+springdoc:
+  swagger-ui:
+    path: /docs
+    
