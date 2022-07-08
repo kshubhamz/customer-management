@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: ${DATASOURCE_URL}
+    url: jdbc:h2:mem:testdb
   jpa:
     defer-datasource-initialization: true
     show-sql: true
@@ -14,3 +14,8 @@ spring:
 h2:
   console:
     enabled: true
+    
+controller:
+  hello:
+    name:
+      default: Manish
